@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b16">
+  <title>NEON RIFT — Arena</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">✦</span><div><b>NEON RIFT</b><small>ARENA PROTOCOL</small></div></div>
+      <div class="top-stats"><span>WAVE <b id="wave">1</b></span><span>ELIMS <b id="kills">0</b></span><span>BEST <b id="best">0</b></span></div>
+      <button id="pauseBtn" class="icon-btn" aria-label="Пауза">Ⅱ</button>
+    </header>
+    <section class="game-wrap">
+      <canvas id="game" width="960" height="600" aria-label="Игровая арена"></canvas>
+      <div class="hud">
+        <div class="hud-left">
+          <div class="label">INTEGRITY <strong id="hpText">100%</strong></div>
+          <div class="bar"><i id="hpBar"></i></div>
+          <div class="label energy-label">RIFT CHARGE <strong id="energyText">100%</strong></div>
+          <div class="bar energy"><i id="energyBar"></i></div>
+        </div>
+        <div class="hud-right"><div class="weapon">◆ <span>PHASE PULSE</span></div><div class="ammo">∞ <small>ENERGY CELLS</small></div></div>
+      </div>
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <div class="eyebrow">SECTOR 07 // SIGNAL FOUND</div>
+          <h1>BREAK THE<br><em>RIFT.</em></h1>
+          <p>Арена захвачена дронами. Переживи волны и используй разлом, чтобы менять позицию в пространстве.</p>
+          <div class="controls">
+            <span><kbd>W A S D</kbd> ДВИЖЕНИЕ</span><span><kbd>MOUSE</kbd> ПРИЦЕЛ</span>
+            <span><kbd>CLICK</kbd> ОГОНЬ</span><span><kbd>SPACE</kbd> РАЗЛОМ</span>
+          </div>
+          <button id="startBtn" class="primary">ЗАПУСТИТЬ СИМУЛЯЦИЮ <span>↗</span></button>
+          <small class="hint">Подсказка: разлом телепортирует тебя вперёд и оставляет энергетический след, который ранит врагов.</small>
+        </div>
+      </div>
+      <div id="toast" class="toast"></div>
+    </section>
+    <footer><span>NEON RIFT <i>v1.0</i></span><span>WASD MOVE · MOUSE AIM · CLICK FIRE · SPACE RIFT · ESC PAUSE</span><span class="live"><i></i> SYSTEM ONLINE</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
